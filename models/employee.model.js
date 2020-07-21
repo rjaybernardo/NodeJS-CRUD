@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
-let employeeSchema = new mongoose.Schema({
+var employeeSchema = new mongoose.Schema({
   fullName: {
     type: String,
-    required: "This field is required",
+    required: "This field is required.",
   },
   email: {
     type: String,
@@ -15,7 +15,6 @@ let employeeSchema = new mongoose.Schema({
     type: String,
   },
 });
-// { typeKey: "$type", _id: false }
 
 // Custom validation for email
 employeeSchema.path("email").validate((val) => {
